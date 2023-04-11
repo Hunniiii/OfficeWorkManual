@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+         Scanner sc = new Scanner(System.in);
+        String[] lines = sc.nextLine().split(" ");
+        int size = Integer.parseInt(lines[0]);
+        int limit = Integer.parseInt(lines[1]);
+        int[][] map = new int[size][size];
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0; i < size; i++) {
+            String[] strings = sc.nextLine().split(" ");
+            for(int j = 0; j < size; j++) {
+                map[i][j] = Integer.parseInt(strings[j]);
+            }
+        }
+        for(int i = 0; i < size; i++) {
+            for(int j = 0; j < size; j++) {
+                if(map[j][i] >= limit) {
+                    break;
+                } else if(j == size-1) {
+                    stringBuilder.append(i+1).append(" ");
+                }
+            }
+        }
+        if(!stringBuilder.toString().equals("")) {
+            System.out.println(stringBuilder.toString().trim());
+        } else {
+            System.out.println("wait");
+        }
+    }
+}
