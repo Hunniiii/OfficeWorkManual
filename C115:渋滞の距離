@@ -1,0 +1,33 @@
+# C115:渋滞の距離
+Paiza C rank Java 言語
+
+
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        // 自分の得意な言語で
+        // Let's チャレンジ！！
+          Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int total=0;
+        //int x;
+        int [] a = new int [n-1];
+        for (int i= 0; i<n-1;i++){
+             //int total =0;
+             a[i] =sc.nextInt();
+              if (a[i]<=m){
+                total+=a[i];
+
+        } 
+
+        }
+
+        System.out.println(total);
+
+
+}
+        
+    }
